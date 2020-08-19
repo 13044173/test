@@ -15,7 +15,7 @@ public class PrintAndHide : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
-        rand = UnityEngine.Random.Range(200, 250);
+        rand = UnityEngine.Random.Range((int)200, (int)251);
         red = GameObject.FindGameObjectsWithTag("Red");
         blue = GameObject.FindGameObjectsWithTag("Blue");
     }
@@ -35,9 +35,12 @@ public class PrintAndHide : MonoBehaviour
         }
         foreach (GameObject b in blue)
         {
-            if (i >= rand)
+            if (i == rand)
             {
                 gameObject.GetComponent<Renderer>().enabled = false;
+                /*
+                Debug.Log(gameObject.name + "'s Random.Range == " + rand + " & int i == " + i); //debug purposes only
+                */
             }
         }
     }

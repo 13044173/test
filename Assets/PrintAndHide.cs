@@ -37,10 +37,8 @@ public class PrintAndHide : MonoBehaviour
         {
             if (i == rand)
             {
-                gameObject.GetComponent<Renderer>().enabled = false;
-                /*
-                Debug.Log(gameObject.name + "'s Random.Range == " + rand + " & int i == " + i); //debug purposes only
-                */
+                rend.enabled = false; //gameObject.GetComponent<Renderer>().enabled = false;
+                //Debug.Log(gameObject.name + "'s Random.Range == " + rand + " & int i == " + i); //debug purposes only
             }
         }
     }
